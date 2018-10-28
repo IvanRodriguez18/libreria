@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EDEDED;
+    font-family: 'Montserrat';
+}
+
+.contenedor {
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.cabecera {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera>h4 {
+    font-size: 18px;
+    line-height: 24px;
+    color: #393A58;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn {
+    font-size: 15px;
+    border: none;
+    color: #FFF;
+    background: #1C3144;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-radius: 100px;
+    transition: 1s all ease;
+}
+
+.btn:hover {
+    background: #0D1321;
+    color: rgba(250, 250, 250, .5);
+}
+
+.cabecera button.active {
+    display: inline-block;
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition: .3s ease all;
+}
+
+.formulario input {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin: 0px;
+}
+
+.formulario .btn {
+    background: #561643;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0px;
+    transition: 1s all ease;
+}
+
+.formulario .btn:hover {
+    background: #3C1742;
+    color: rgba(250, 250, 250, .5);
+}
+
+.error_box {
+    background: #BA1F33;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 30%;
+    margin: auto;
+    line-height: 13px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.error_box.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    background: #FFF;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 80px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .16);
+}
+
+td,
+th {
+    border-bottom: 1px solid #E9E9E9;
+    padding: 15px;
+}
+
+th {
+    color: #393A58;
+    font-size: 14px;
+}
+
+td {
+    font-size: 12px;
+}
+
+.tabla>tbody>tr:nth-child(2n+1) {
+    background: #F3F3F3;
+}
+
+.tabla>tbody>tr:hover {
+    background: #0F0F0F;
+    color: rgba(250, 250, 250, .7);
+}
+
+.loader {
+    margin: auto;
+    border: 5px solid #FFF;
+    /*borde gris parte inferior*/
+    border-top: 5px solid #0582CA;
+    /*borde azul giratoria*/
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: none;
+    animation: spin 2s linear infinite;
+}
+
+.loader.active {
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
